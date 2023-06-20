@@ -1,9 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Timeline from "@/components/Timeline";
+import Head from "next/head";
 
 export default function Home() {
   return (
@@ -14,12 +10,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div>
-          <h1>Hey, this is Cole</h1>
-          <p>This site is under construction and will showcase my talents as a developer soon</p>
+      <main>
+        <div className="flex bg-slate-600">
+          <div>{/* HERO */}</div>
+          <div>
+            {/* TIMELINE */}
+            <Timeline />
+          </div>
+          <div>{/* PROJECTS */}</div>
         </div>
       </main>
     </>
-  )
+  );
 }
